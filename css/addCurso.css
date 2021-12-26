@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background-color: #0097A7;
+    text-align: center;
+    box-shadow: 0px 4px 4px 2px rgb(0 0 0 / 14%);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff !important;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    color: #0097A7;
+
+}
+
+h3 {
+    font-size: 25px;
+    margin: 30px 0;
+}
+
+h6 {
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.curso-campo {
+    width: calc(50% - 10px);
+    height: 40px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px #000;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+#imagem {
+    box-shadow: none;
+}
+
+.curso-footer {
+    background-color: inherit;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+.buttonCurso {
+    background-color: #0097A7;
+    border-color: #0097A7;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 12px;
+}
+
+table img {
+    width: 220px;
+    border: 1px solid #ccc;
+}

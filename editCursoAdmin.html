@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>CRONOS AGÊNCIA - admin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/editCurso.css" />
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+      </head>
+<body>
+    <header>
+        <div class="container">
+          <a href="#">
+            <img src="imagens/CRONOS-logo-white.png" alt="Agência CRONOS" />
+          </a>
+          <h1>Painel administrativo</h1>
+        </div>
+      </header>
+
+      <section id="servicos" class="py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <h3>Alterar Curso</h3>
+                    <div id="addCurso">
+                        <form id="form" class="curso-form">
+                            <h6>Nome:</h6>
+                            <input type="text" id="nome" data-index="new" class="curso-campo" placeholder="Nome do Curso" required>
+                            <h6>Imagem:</h6>
+                            <input type="file" id="imagem" class="curso-campo" src="./imagens/ImgAddCurso/" placeholder="Imagem do Curso" required>
+                            <h6>Descrição:</h6>
+                            <textarea id="descricao" class="curso-campo"></textarea>
+                        </form>
+                        <footer class="curso-footer">
+                            <button id="salvarCurso" class="buttonCurso">Salvar</button>
+                            <button id="cancCurso" class="buttonCurso">Cancelar</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+        
+      <footer class="py-3 bg-light">
+        <div class="container text-center">
+          <p class="m-0">
+            copyright 2021
+            <img src="imagens/favicon.png" width="30" alt="" /> agência CRONOS
+          </p>
+        </div>
+      </footer>
+    
+      <script src="script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+      </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
+</body>
+</html>
