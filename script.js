@@ -29,4 +29,5 @@ const validaCampo = () => {
     return document.getElementById('form').reportValidity()
 }
 
-
+//Redirecionando a página principal para ADICIONAR NOVO
+window.location.href = 'addCursoAdmin.html'
