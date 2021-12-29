@@ -51,10 +51,12 @@ const salvarCurso = () => {
             createCurso(curso)
             atualizaTabela()
             apagaCampo()
+            //redireciona para a página principal
         } else {
             updateCurso(index, curso)
             atualizaTabela()
             apagaCampo()
+            //redireciona para a página principal
         }
     }
 }
@@ -72,3 +74,47 @@ const criaLinha = (curso, index) => {
 `
 document.querySelector('#tableCurso>tbody').appendChild(novaLinha)
 }
+
+const apagaTabela = () => {
+    const linhas = document.querySelectorAll('#tableCurso>tbody tr')
+    linhas.forEach(linha => linha.parentNode.removeChild(linha))
+}
+
+const atualizaTabela = () => {
+    const dbCurso = readCurso()
+    apagaTabela()
+    dbCurso.forEach(criaLinha)
+}
+
+const preencherCampos = (curso) => {
+    document.getElementById('nome').value = curso.nome
+    document.getElementById('imagem').value = curso.imagem
+    document.getElementById('descricao').value = curso.descricao
+    document.getElementById('nome').dataset.index = curso.index
+}
+
+const editaCurso = (index) => {
+    const curso = readCurso()[index]
+    curso.index = index
+    preencherCampos(curso)
+    //fechar aba após editar curso
+}
+
+const editaDelete = (event) => {
+    if (event.target.type == 'button') {
+        const [action, index] = event.target.id.split('-')
+        if (action == 'edit') {
+            editaCurso(index)
+        } else {
+            const curso = readCurso()[index]
+            const resposta = confirm(`Deseja excluir o curso ${curso.nome}`)
+            if (resposta) {
+                deleteCurso(index)
+                atualizaTabela()
+            }
+        }
+    }
+}
+
+atualizaTabela()
+
