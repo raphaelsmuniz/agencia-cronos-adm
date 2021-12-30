@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/estilo.css" />
-  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       <a href="#">
         <img src="imagens/CRONOS-logo-white.png" alt="Agência CRONOS" />
       </a>
-      <h1>Painel administrativo</h1>
+      <h1 class="painelHeader">Painel administrativo</h1>
     </div>
   </header>
   <section id="servicos" class="py-5 mb-5">
@@ -28,7 +28,7 @@
 
 
           <h3>Serviços</h3>
-          <button class="btn btn-primary">Adicionar novo</button>
+          <button class="btn btn-primary" id="adicionarCurso">Adicionar novo</button>
           <!-- <a href="./addCursoAdmin.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Adicionar novo</a> -->
           <table id="tableCurso" class="table my-5">
             <thead>
@@ -40,7 +40,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <td>Desenvolvimento Web</td>
                 <td><img src="imagens/ilustra-web.png" class="img-fluid" /></td>
                 <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
@@ -66,7 +66,7 @@
                   <button class="btn btn-secondary m-1">editar</button>
                   <button class="btn btn-danger m-1">excluir</button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>

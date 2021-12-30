@@ -1,9 +1,21 @@
 
+const openAdd = () => {
+    window.open('http://127.0.0.1:5501/addCursoAdmin.html')    
+}
 
+const closeAdd = () => {
+    // apagaCampo()
+    window.open('http://127.0.0.1:5501/admin.html')
+}
 
 //obter e escrever valores convertidos em String
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_curso')) ?? []
 const setLocalStorage = (dbCurso) => localStorage.setItem('db_curso', JSON.stringify(dbCurso))
+
+const tempCurso = {
+    nome: 'Java',
+    descricao: 'curso de java'
+}
 
 //CRUD -> create, read, update e delete
 const createCurso = (curso) => {
@@ -68,8 +80,8 @@ const criaLinha = (curso, index) => {
     <td>${curso.imagem}</td>
     <td>${curso.descricao}</td>
     <td>
-        <button type="button" class="btn btn-secondary m-1" id="editar-${index}">Editar</button>
-        <button type="button" class="btn btn-danger m-1" id="excluir-${index}" >Excluir</button>
+        <button class="btn btn-secondary m-1" id="editar-${index}">Editar</button>
+        <button class="btn btn-danger m-1" id="excluir-${index}" >Excluir</button>
     </td>
 `
 document.querySelector('#tableCurso>tbody').appendChild(novaLinha)
@@ -118,3 +130,15 @@ const editaDelete = (event) => {
 
 atualizaTabela()
 
+//Eventos
+document.getElementById('adicionarCurso')
+    .addEventListener('click', openAdd)
+
+document.getElementById('cancCurso')
+    .addEventListener('click', closeAdd)
+
+document.getElementById('salvarCurso')
+    .addEventListener('click', salvarCurso)
+
+document.querySelector('#tableCurso>tbody')
+    .addEventListener('click', editaDelete)
